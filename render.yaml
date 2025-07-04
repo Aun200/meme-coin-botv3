@@ -5,4 +5,10 @@ services:
     plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
-    pythonVersion: 3.10.13
+    envVars:
+      - key: BOT_TOKEN
+        fromEnvVar: BOT_TOKEN
+      - key: TELEGRAM_CHAT_ID
+        fromEnvVar: TELEGRAM_CHAT_ID
+      - key: HONEYPOT_API_KEY
+        fromEnvVar: HONEYPOT_API_KEY
