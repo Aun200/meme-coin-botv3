@@ -1,14 +1,9 @@
 services:
   - type: web
-    name: meme-coin-sniper-bot
+    name: meme-coin-sniper
     env: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
-    envVars:
-      - key: TELEGRAM_BOT_TOKEN
-        sync: false
-      - key: TELEGRAM_CHAT_ID
-        sync: false
-      - key: WALLET_ADDRESS
-        sync: false
+    pythonVersion: 3.10.13
+    autoDeploy: true
